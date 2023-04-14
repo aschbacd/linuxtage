@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: radio-list
+  name: demo
   labels:
-    app: radio-list
+    app: demo
 spec:
   selector:
-    app: radio-list
+    app: demo
   ports:
     - protocol: TCP
       port: 8080
-      targetPort: 8080
+      targetPort: 80
