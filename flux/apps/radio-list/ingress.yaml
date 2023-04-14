@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  name: radio-list
+spec:
+  tls:
+    - hosts:
+        - radio-list.dominikaschbacher.com
+      secretName: acme-cert-radio-list
+  rules:
+    - host: radio-list.dominikaschbacher.com
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: radio-list
+                port:
+                  number: 8080
