@@ -113,7 +113,7 @@ flux bootstrap github \
 
 <!--_backgroundColor: white-->
 
-![Jaeger h:600](assets/jaeger.png)
+![Jaeger h:450](assets/jaeger.webp)
 
 ---
 
